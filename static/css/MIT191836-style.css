@@ -1,0 +1,611 @@
+/*
+
+MIT191836 Template 
+
+*/
+
+  @import url('https://fonts.googleapis.com/css?family=Muli:300,700|Nunito');
+
+  body {
+    background: #ffffff;
+    font-family: 'Nunito', sans-serif;
+    overflow-x: hidden;
+    padding-top: 70px;
+  }
+
+
+
+  /*---------------------------------------
+     GENERAL               
+  -----------------------------------------*/
+
+  html{
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a {
+    color: #fdfbfb;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    text-decoration: none !important;
+  }
+
+  a,
+  input, button,
+  .form-control {
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+
+  a:hover, a:active, a:focus {
+    color: #c42020;
+    outline: none;
+  }
+
+  ::-webkit-scrollbar{
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    cursor: pointer;
+    background: #c42020;
+  }
+
+  .section-title {
+    padding-bottom: 40px;
+  }
+
+  .section-title h2 {
+    margin: 0;
+  }
+
+  .section-title small {
+    display: block;
+  }
+
+  .overlay {
+    background: rgba(20,20,20,0.5);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .entry-form {
+    background: #c42020;
+    border-radius: 100%;
+    text-align: center;
+    padding: 6em;
+    width: 450px;
+    height: 450px;
+  }
+
+  .entry-form h2 {
+    color: #ffffff;
+    margin: 0;
+  }
+
+  .entry-form .form-control {
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid;
+    border-radius: 0;
+    box-shadow: none;
+    height: 45px;
+    margin: 10px 0;
+  }
+
+  .entry-form .submit-btn {
+    background: #ffffff;
+    border-radius: 50px;
+    border: 0;
+    color: #c42020;
+    width: 50%;
+    height: 50px;
+    margin: 30px auto;
+    margin-bottom: 10px;
+  }
+
+  .entry-form .submit-btn:hover {
+    background: #c42020;
+    color: #ffffff;
+  }
+
+  .predict-form .submit-btn {
+    background: #c42020;
+    border-radius: 50px;
+    border: 0;
+    color: #ffffff;
+    width: 10%;
+    height: 50px;
+    margin: 50px auto;
+    margin-bottom: 10px;
+  }
+
+  section {
+    position: relative;
+    padding: 180px 0;
+  }
+
+  #team,
+  #testimonial {
+    background: #f9f9f9;
+  }
+
+  #team,
+  #testimonial {
+    text-align: center;
+  }
+
+  #google-map iframe {
+    border: 0;
+    width: 100%;
+    height: 390px;
+  }
+
+
+
+  /*---------------------------------------
+     BUTTONS
+  -----------------------------------------*/
+
+  .section-btn {
+    background: transparent;
+    border-radius: 50px;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    font-size: inherit;
+    font-weight: normal;
+    padding: 15px 30px;
+    transition: 0.5s;
+  }
+
+  .section-btn:hover {
+    background: #ffffff;
+    border-color: transparent;
+  }
+
+
+
+  /*---------------------------------------
+       PRE LOADER
+  -----------------------------------------*/
+
+  .preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    background: none repeat scroll 0 0 #ffffff;
+  }
+
+  .spinner {
+    border: 1px solid transparent;
+    border-radius: 3px;
+    position: relative;
+  }
+
+  .spinner:before {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 45px;
+    height: 45px;
+    margin-top: -10px;
+    margin-left: -10px;
+    border-radius: 50%;
+    border: 1px solid #575757;
+    border-top-color: #ffffff;
+    animation: spinner .9s linear infinite;
+  }
+
+  @keyframes spinner {
+    to {transform: rotate(360deg);}
+  }
+
+  @keyframes spinner {
+    to {transform: rotate(360deg);}
+  }
+
+
+
+  /*---------------------------------------
+      MENU
+  -----------------------------------------*/
+
+  .custom-navbar {
+    background: #ffffff;
+    border-top: 5px solid #c42020;
+    border-bottom: 0;
+    -webkit-box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
+    padding: 12px 0;
+    margin-bottom: 0;
+    padding: 0;
+  }
+
+  .custom-navbar .navbar-brand {
+    color: #c42020;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 40px;
+  }
+
+  .custom-navbar .navbar-nav.navbar-nav-first {
+    margin-left: 8em;
+  }
+
+  .custom-navbar .navbar-nav.navbar-right li a {
+    padding-right: 12px;
+    padding-left: 12px;
+  }
+
+  .custom-navbar .navbar-nav.navbar-right li a .fa {
+    background: #c42020;
+    border-radius: 100%;
+    color: #ffffff;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    display: inline-block;
+    margin-right: 5px;
+  }
+
+  .custom-navbar .nav li a {
+    line-height: 40px;
+    color: #575757;
+    padding-right: 22px;
+    padding-left: 22px;
+  }
+
+  .custom-navbar .navbar-nav > li > a:hover,
+  .custom-navbar .navbar-nav > li > a:focus {
+    background-color: transparent;
+  }
+
+  .custom-navbar .nav li a:hover {
+    background-color: #c42020;
+    color: #ffffff;
+  }
+
+  .custom-navbar .nav li.active > a {
+    background-color: #c42020;
+    color: #ffffff;
+  }
+
+  .custom-navbar .navbar-toggle {
+    border: none;
+    padding-top: 10px;
+  }
+
+  .custom-navbar .navbar-toggle {
+    background-color: transparent;
+  }
+
+  .custom-navbar .navbar-toggle .icon-bar {
+    background: #252525;
+    border-color: transparent;
+  }
+
+
+
+  /*---------------------------------------
+      HOME  & SLIDER
+  -----------------------------------------*/
+
+  #Predict {
+    padding: 10px;
+  }
+  #Predict h4 {
+    color: #c42020;
+    padding: 40px;
+    font-size: 50px;
+    font-style:normal;
+    font-family:'Nunito', sans-serif;
+    margin-left: 200px;
+  }
+
+  #Predict img {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  #home {
+    padding: 5px;
+  }
+
+  #home h1 {
+    color: #c42020;
+    font-size: 50px;
+    margin: 0;
+    padding: 10px;
+    max-width: 500em;
+  }
+
+  #home h3 {
+    color: #c42020;
+    font-size: 25px;
+    font-weight: 300;
+    margin: 0;
+    padding: 10px;
+    -ms-text-size-adjust: auto;
+  }
+
+  @media (min-width: 768px) {
+    .home-slider .col-md-6 {
+      padding-left: 0;
+    }
+  }
+
+  .home-slider .caption {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: left;
+    height: 50%;
+  }
+
+  .home-slider .item {
+    background-repeat: no-repeat;
+    background-attachment: local;
+    background-size: cover;
+    height: 750px;
+  }
+
+  .home-slider .item-first {
+    background-image: url(../images/slider-image1.jpg);
+	background-position: center;
+  }
+
+  /*---------------------------------------
+      FEATURE
+  -----------------------------------------*/
+
+  .feature-thumb {
+    border: 1px solid #f0f0f0;
+    padding: 5em 3em;
+  }
+
+  .feature-thumb span {
+    background: #3f51b5;
+    border-radius: 50px;
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: bold;
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+
+  .feature-thumb h3 {
+    margin: 10px 0;
+  }
+
+
+
+  /*---------------------------------------
+      ABOUT
+  -----------------------------------------*/
+
+
+  #about input {
+    color: #f0f0f0;
+  }
+
+  #about figure span {
+    float: left;
+    margin-left: -15px;
+    padding: 15px 20px;
+    position: relative;
+    top: 0px;
+  }
+
+  #about figure span i {
+    background: #c42020;
+    border-radius: 100px;
+    color: #ffffff;
+    font-size: 20px;
+    width: 50px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+  }
+
+  #about form {
+    margin-right: 10px;
+    padding: 60px 60px;
+    font-size: 20px;
+  }
+
+  #about input {
+    margin-right: 10px;
+    font-size: 20px;
+  }
+
+
+
+  /*---------------------------------------
+      TEAM
+  -----------------------------------------*/
+
+  .team-thumb {
+    background: #ffffff;
+    position: center;
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .team-info {
+    padding: 15px 15px;
+  }
+
+  .team-thumb .social-icon {
+    border-top: 1px solid #f0f0f0;
+    padding: 4px 30px 0 30px;
+  }
+
+  .team-thumb .social-icon li a {
+    background: #ffffff;
+    color: #c42020;
+  }
+
+  .team-info h2 {
+    margin: 0;
+  }
+
+
+
+  /*---------------------------------------
+      CONTACT
+  -----------------------------------------*/
+
+  #contact {
+    background: #c42020;
+    padding: 90px;
+  }
+
+  #contact h2 {
+    color: #ffffff;
+  }
+
+  #contact .section-title {
+    padding-bottom: 20px;
+  }
+
+  #contact h2 > small,
+  #contact p,
+  #contact a {
+    color: #f9f9f9;
+  }
+
+  #contact-form .col-md-12,
+  #contact-form .col-md-4 {
+    padding-left: 0;
+  }
+
+  #contact-form .form-control {
+    border: 0;
+    border-radius: 5px;
+    box-shadow: none;
+    margin: 10px 0;
+  }
+
+  #contact-form input {
+    height: 50px;
+  }
+
+  #contact-form input[type='submit'] {
+    border-radius: 50px;
+    border: 1px solid transparent;
+  }
+
+  #contact-form input[type='submit']:hover {
+    background: transparent;
+    border-color: #ffffff;
+    color: #ffffff;
+  }
+
+
+
+  /*---------------------------------------
+     FOOTER
+  -----------------------------------------*/
+
+  footer {
+    background: #020202;
+    padding: 30px;
+  }
+
+  footer .section-title {
+    padding-bottom: 10px;
+  }
+
+  footer h2 {
+    font-size: 30px;
+  }
+
+  footer a,
+  footer p {
+    color: #ffffff;
+  }
+
+  footer .social-icon {
+    margin-top: 10px;
+  }
+
+  .footer-info {
+    margin-right: 2em;
+  }
+
+  .footer-info h2 {
+    color: #ffffff;
+    padding: 0;
+  }
+
+  .footer_menu h2 {
+    margin-top: 2em;
+  }
+
+  .footer_menu ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  .footer_menu li {
+    display: inline-block;
+    list-style: none;
+    margin: 5px 15px 5px 0;
+  }
+
+
+
+  /*---------------------------------------
+     SOCIAL ICON
+  -----------------------------------------*/
+
+  .social-icon {
+    position: center;
+    padding: 0;
+    margin: 0;
+  }
+
+  .social-icon li {
+    display: inline-block;
+    list-style: none;
+    margin-bottom: 0;
+  }
+
+  .social-icon li a {
+    border-radius: 100px;
+    color: #fdfcfc;
+    font-size: 15px;
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.4s ease-in-out;
+    position: relative;
+    margin: 5px 5px 5px 0;
+  }
+
+  .social-icon li a:hover {
+    background: #c42020;
+    color: #ffffff;
+  }

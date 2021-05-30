@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="description" content="">
+     <meta name="keywords" content="">
+     <meta name="author" content="">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <title> Dust mite </title>
+
+     <link rel="stylesheet" href="static/css/bootstrap.min.css">
+     <link rel="stylesheet" href="static/css/font-awesome.min.css">
+     <link rel="stylesheet" href="static/css/owl.carousel.css">
+     <link rel="stylesheet" href="static/css/owl.theme.default.min.css">
+     <link rel="stylesheet" href="static/css/MIT191836-style.css">
+
+<!-- MAIN CSS -->
+
+</head>
+<body id="top" data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
+  <!-- MENU -->
+  <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
+       <div class="container">
+
+            <div class="navbar-header">
+                 <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                      <span class="icon icon-bar"></span>
+                 </button>
+
+                 <!-- lOGO TEXT HERE -->
+                 <a href="#" class="navbar-brand">MIT Project</a>
+            </div>
+
+            <!-- MENU LINKS -->
+            <div class="collapse navbar-collapse">
+                 <ul class="nav navbar-nav navbar-nav-first">
+                      <li><a href="#top" class="smoothScroll">Prediction</a></li>
+                      <li><a href="#about" class="smoothScroll">About</a></li>
+                      <li><a href="#team" class="smoothScroll">Team</a></li>
+                      <li><a href="#contact" class="smoothScroll">Contact</a></li>
+                 </ul>
+                 <ul class="nav navbar-nav navbar-right">
+                      <li><a href="#"><i class="fa fa-phone"></i> +61 420264559</a></li>
+                 </ul>
+            </div>
+
+       </div>
+  </section>
+
+  <!-- HOME -->
+  <section id="Predict">
+     <div class="container">
+          <div class="col-md-12 col-sm-12">
+               <h4> Dust mite or Not Dust mite </h4>
+          </div>
+                    <div style="width: 90%; margin: auto; text-align: center">
+                         <img src="{{ url_for('send_file', filename=image_file_name)}}" style ="max-width: 400px; max-height: 400px; margin-top: 0px; margin-bottom: 10px;">
+                         <h1> Given Input </h1>
+                         <h1> Your output is: {{ var }}</h1>
+                    </div>
+                         <div class="predict-form">
+                         <button class="submit-btn form-control" id="form-submit">
+                         <a href="/">Back to Home</a>
+                         </button>
+                         </div>
+               </div>
+          </div>
+     </div>
+  </section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+       <div class="row">
+            <div class="col-md-7 col-sm-10">
+                 <div class="about-info">
+                      <h2>Get check if there is Dust mite in your house</h2>
+                      <figure>
+                           <span><i class="fa fa-bar-chart-o"></i></span>
+                           <figcaption>
+                                <h3>Microscope</h3>
+                                <p>Microscopes are used in a wide range of industries, such as education, research, medicine, forensics, and industrial manufacturing.</p>
+                           </figcaption>
+
+                           <figure>
+                            <span><i class="fa fa-bar-chart-o"></i></span>
+                            <figcaption>
+                                 <h3>Microcontroller</h3>
+                                 <p>A microcontroller is a small computer on a single metal-oxide-semiconductor integrated circuit (IC) chip.</p>
+                            </figcaption>
+
+                            <figure>
+                              <span><i class="fa fa-bar-chart-o"></i></span>
+                              <figcaption>
+                                   <h3>Azure</h3>
+                                   <p>A microcontroller is a small computer on a single metal-oxide-semiconductor integrated circuit (IC) chip.</p>
+                              </figcaption>
+                        </figure>
+                  </div>
+              </div>
+       </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section id="team">
+  <div class="container">
+            <div class="col-md-13 col-sm-13">
+                 <div class="section-title">
+                      <h2>Team <small>Meet Team Members</small></h2>
+                 </div>
+            <div class="col-md-3 col-sm-3">
+                 <div class="team-thumb">
+                      <div class="team-info">
+                           <h3>Karthik Reddy</h3>
+                           <span>MIT191836</span>
+                      </div>
+                      <ul class="social-icon">
+                           <li><a href="#" class="fa fa-facebook-square" attr="facebook icon"></a></li>
+                           <li><a href="#" class="fa fa-twitter"></a></li>
+                           <li><a href="#" class="fa fa-instagram"></a></li>
+                      </ul>
+                 </div>
+            </div>
+
+            <div class="col-md-3 col-sm-3">
+                 <div class="team-thumb">
+                      <div class="team-info">
+                           <h3>Sai Manoj</h3>
+                           <span>MIT191725</span>
+                      </div>
+                      <ul class="social-icon">
+                           <li><a href="#" class="fa fa-facebook-square" attr="facebook icon"></a></li>
+                           <li><a href="#" class="fa fa-twitter"></a></li>
+                           <li><a href="#" class="fa fa-instagram"></a></li>
+                      </ul>
+                 </div>
+            </div>
+
+            <div class="col-md-3 col-sm-3">
+                 <div class="team-thumb">
+                      <div class="team-info">
+                           <h3>Ganesh</h3>
+                           <span>MIT191817</span>
+                      </div>
+                      <ul class="social-icon">
+                           <li><a href="#" class="fa fa-facebook-square" attr="facebook icon"></a></li>
+                           <li><a href="#" class="fa fa-twitter"></a></li>
+                           <li><a href="#" class="fa fa-instagram"></a></li>
+                      </ul>
+                 </div>
+            </div>
+
+            <div class="col-md-3 col-sm-3">
+                 <div class="team-thumb">
+                      <div class="team-info">
+                           <h3>Sajutha</h3>
+                           <span>MIT191709</span>
+                      </div>
+                      <ul class="social-icon">
+                           <li><a href="#" class="fa fa-facebook-square" attr="facebook icon"></a></li>
+                           <li><a href="#" class="fa fa-twitter"></a></li>
+                           <li><a href="#" class="fa fa-instagram"></a></li>
+                      </ul>
+                 </div>
+            </div>
+            <div>&nbsp;</div>
+            <div class="col-md-3 col-sm-3">
+                 <div class="team-thumb">
+                      <div class="team-info">
+                           <h3>Manpreeth Singh</h3>
+                           <span>MIT191845</span>
+                      </div>
+                      <ul class="social-icon">
+                           <li><a href="#" class="fa fa-facebook-square" attr="facebook icon"></a></li>
+                           <li><a href="#" class="fa fa-twitter"></a></li>
+                           <li><a href="#" class="fa fa-instagram"></a></li>
+                      </ul>
+                 </div>
+            </div>
+
+       </div>
+  </div>
+</section>
+
+ <!-- CONTACT -->
+ <section id="contact">
+  <div class="container">
+       <div class="row">
+            <div class="col-md-6 col-sm-12">
+                 <form id="contact-form" role="form" action="" method="post">
+                      <div class="section-title">
+                           <h2>Contact us <small>we love conversations. let us talk!</small></h2>
+                      </div>
+                      <div class="col-md-12 col-sm-12">
+                           <input type="text" class="form-control" placeholder="Enter full name" name="name" required="">
+                           <input type="email" class="form-control" placeholder="Enter email address" name="email" required="">
+
+                           <textarea class="form-control" rows="6" placeholder="Tell us about your message" name="message" required=""></textarea>
+                      </div>
+
+                      <div class="col-md-4 col-sm-12">
+                           <input type="submit" class="form-control" name="send message" value="Send Message">
+                      </div>
+
+                 </form>
+            </div>
+
+  </div>
+</section>
+
+
+
+<!-- FOOTER -->
+<footer id="footer">
+  <div class="container">
+       <div class="row">
+
+            <div class="col-md-4 col-sm-6">
+                 <div class="footer-info">
+                      <div class="section-title">
+                           <h2>Headquarter</h2>
+                      </div>
+                      <address>
+                      <p>119 Bambra Road Caulfield,<br> Melbourne, Victoria 3162</p>
+                      </address>
+
+                 </div>
+            </div>
+
+            <div class="col-md-3 col-sm-3">
+                  <div class="footer-info">
+                           <div class="section-title">
+                               <h2>Contact Info</h2>
+                      </div>
+                      <address>
+                           <p>+61 420264559</p>
+                           <p><a href="mailto: karthikreddy996@gmail.com">karthikreddy996@gmail.com</a></p>
+                      </address>
+
+                 </div>
+            </div>
+       </div>
+  </div>
+</footer>
+
+
+<!-- SCRIPTS -->
+<script src="static/js/jquery.js"></script>
+<script src="static/js/bootstrap.min.js"></script>
+<script src="static/js/owl.carousel.min.js"></script>
+<script src="static/js/smoothscroll.js"></script>
+<script src="static/js/custom.js"></script>
+</body>
+
+</html>
